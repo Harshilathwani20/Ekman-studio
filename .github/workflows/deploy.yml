@@ -33,7 +33,7 @@ jobs:
             local file="$1"
             if [ -f "$file" ]; then
               echo "Uploading: $file"
-              wrangler r2 object put "$BUCKET/$file" --file="$file"
+              wrangler r2 object put "$BUCKET/$file" --file="$file" --remote
             fi
           }
 
