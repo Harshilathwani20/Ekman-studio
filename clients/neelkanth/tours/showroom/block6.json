@@ -1,0 +1,144 @@
+{
+      "image": "panos/block6.jpeg",
+        "yaw": 2.995694,
+        "pitch": 0,
+        "roll": 0.02,
+        "fov": 1.349553,
+      "hotspots": [
+        {
+          "type": "link",
+          "target": "block6_outside",
+          "orientation": "wall",
+          "yaw": -2.958959, "pitch": 0.034867
+        },
+        {
+        "type": "bubble",
+        "id": "b601",
+        "yaw": -2.384427, "pitch": 0.290424
+        },
+        {
+        "type": "bubble",
+        "id": "b602",
+        "yaw": -1.929950, "pitch": -0.053651
+        },
+        {
+        "type": "bubble",
+        "id": "b603",
+        "yaw": -1.565093, "pitch": 0.320312
+        },
+        {
+        "type": "bubble",
+        "id": "b604",
+        "yaw": -0.774635, "pitch": 0.194118
+        },
+        {
+        "type": "bubble",
+        "id": "b605",
+        "yaw": -1.534052, "pitch": -0.086470
+        },
+        {
+        "type": "bubble",
+        "id": "b606",
+        "yaw": -0.453765, "pitch": 0.021817
+        },
+        {
+        "type": "bubble",
+        "id": "b607",
+        "yaw": 0.065238, "pitch": 0.231107
+        },
+        {
+        "type": "bubble",
+        "id": "b608",
+        "yaw": -0.105439, "pitch": -0.043798
+        },
+        {
+        "type": "bubble",
+        "id": "b609",
+        "yaw": 0.238730, "pitch": -0.010849
+        },
+        {
+        "type": "bubble",
+        "id": "b611",
+        "yaw": 0.976920, "pitch": 0.346056
+        },
+        {
+        "type": "bubble",
+        "id": "b612",
+        "yaw": 1.978098, "pitch": 0.370912
+        },
+        {
+        "type": "bubble",
+        "id": "b613",
+        "yaw": 0.601156, "pitch": -0.189227
+        },
+        {
+        "type": "bubble",
+        "id": "b614",
+        "yaw": 0.766078, "pitch": -0.234320
+        },
+        {
+        "type": "bubble",
+        "id": "b615",
+        "yaw": 1.116609, "pitch": -0.189591
+        },
+        {
+        "type": "bubble",
+        "id": "b616",
+        "yaw": 1.990886, "pitch": -0.204962
+        },
+        {
+        "type": "bubble",
+        "id": "b617",
+        "yaw": 2.212727, "pitch": -0.082240
+        },
+        {
+        "type": "bubble",
+        "id": "b618",
+        "yaw": 0.273152, "pitch": 0.546454
+        },
+        {
+        "type": "bubble",
+        "id": "b619",
+        "yaw": -0.233994, "pitch": 0.355233
+        },
+        {
+        "type": "bubble",
+        "id": "b620",
+        "yaw": -1.046225, "pitch": 0.865474
+        },
+        {
+        "type": "bubble",
+        "id": "b621",
+        "yaw": -2.470994, "pitch": 0.715384
+        },
+        {
+        "type": "bubble",
+        "id": "b622",
+        "yaw": -3.086231, "pitch": 0.516735
+        },
+        {
+        "type": "bubble",
+        "id": "b623",
+        "yaw": 2.292298, "pitch": 0.780092
+        },
+        {
+        "type": "bubble",
+        "id": "b624",
+        "yaw": 0.447757, "pitch": 0.363462
+        },
+        {
+        "type": "bubble",
+        "id": "b625",
+        "yaw": 2.753226, "pitch": 0.282207
+        }
+      ],
+      "limits": {
+        "pitchMin": 0,
+        "pitchMax": 14,
+        "yawMin": -180,
+        "yawMax": 180,
+        "fovMin": 60,
+        "fovMax": 120,
+        "dragScale": 0.5
+      }
+    }

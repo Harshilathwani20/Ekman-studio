@@ -1,0 +1,99 @@
+{
+      "image": "panos/block8.jpeg",
+      "yaw": 0.137408,
+      "pitch": 0.244346,
+      "roll": -0.01,
+      "fov": 1.349553,
+      "hotspots": [
+        {
+          "type": "link",
+          "target": "block8_outside",
+          "orientation": "wall",
+          "yaw": -2.9, "pitch": -0.1
+        },
+        {
+        "type": "bubble",
+        "id": "b801",
+        "yaw": -1.990175, "pitch": 0.030727
+        },
+        {
+        "type": "bubble",
+        "id": "b802",
+        "yaw": -1.914429, "pitch": 0.397381
+        },
+        {
+        "type": "bubble",
+        "id": "b803",
+        "yaw": -1.816401, "pitch": 0.247206
+        },
+        {
+        "type": "bubble",
+        "id": "b804",
+        "yaw": -1.260198, "pitch": 0.286860
+        },
+        {
+        "type": "bubble",
+        "id": "b805",
+        "yaw": -0.744003, "pitch": -0.010694
+        },
+        {
+        "type": "bubble",
+        "id": "b806",
+        "yaw": -0.473569, "pitch": 0.216794
+        },
+        {
+        "type": "bubble",
+        "id": "b807",
+        "yaw": 0.009775, "pitch": 0.203576
+        },
+        {
+        "type": "bubble",
+        "id": "b808",
+        "yaw": 0.294636, "pitch": 0.094574
+        },
+        {
+        "type": "bubble",
+        "id": "b809",
+        "yaw": 0.551390, "pitch": 0.381578
+        },
+        {
+        "type": "bubble",
+        "id": "b810",
+        "yaw": -0.911149, "pitch": 0.420162
+        },
+        {
+        "type": "bubble",
+        "id": "b811",
+        "yaw": -1.043829, "pitch": 0.713789
+        },
+        {
+        "type": "bubble",
+        "id": "b812",
+        "yaw": -2.203057, "pitch": 0.754442
+        },
+        {
+        "type": "bubble",
+        "id": "b813",
+        "yaw": 3.058915, "pitch": 0.577041
+        },
+        {
+        "type": "bubble",
+        "id": "b814",
+        "yaw": -2.403436, "pitch": 0.436426
+        },
+        {
+        "type": "bubble",
+        "id": "b815",
+        "yaw": 2.922749, "pitch": 0.320899
+        }
+      ],
+      "limits": {
+        "pitchMin": 0,
+        "pitchMax": 14,
+        "yawMin": -180,
+        "yawMax": 180,
+        "fovMin": 60,
+        "fovMax": 120,
+        "dragScale": 0.5
+      }
+    }

@@ -1,0 +1,8 @@
+name = "ekman-studio"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+# R2 bucket binding — must match what the Worker reads as env.ASSETS
+[[r2_buckets]]
+binding = "ASSETS"
+bucket_name = "ekman-studio"

@@ -1,0 +1,33 @@
+{
+  "products": "products.json",
+  "scenes": {
+    "entrance": "entrance.json",
+    "entrance_front": "entrance_front.json",
+    "block1_outside": "block1_outside.json",
+    "block1": "block1.json",
+    "block2": "block2.json",
+    "block2_outside": "block2_outside.json",
+    "block3": "block3.json",
+    "block3_outside": "block3_outside.json",
+    "block4": "block4.json",
+    "block5_outside": "block5_outside.json",
+    "block5": "block5.json",
+    "block6_outside": "block6_outside.json",
+    "block6": "block6.json",
+    "block7_outside": "block7_outside.json",
+    "block7": "block7.json",
+    "block8_outside": "block8_outside.json",
+    "block8": "block8.json",
+    "block9_1": "block9_1.json",
+    "block9_2": "block9_2.json",
+    "block10": "block10.json",
+    "block11": "block11.json",
+    "block12": "block12.json",
+    "block13": "block13.json",
+    "block13_outside": "block13_outside.json",
+    "block14_outside": "block14_outside.json",
+    "block14": "block14.json",
+    "block15": "block15.json",
+    "block15_outside": "block15_outside.json"
+  }
+}

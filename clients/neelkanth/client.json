@@ -1,0 +1,14 @@
+{
+  "name": "Neelkanth",
+  "branding": {
+    "logo": "/assets/logos/neelkanth.png",
+    "primaryColor": "#2a6cf6"
+  },
+  "adminPassword": {
+    "plain": "1"
+  },
+  "passwords": [
+    { "plain": "client", "tour": "showroom" },
+    { "plain": "dev", "tour": "showroom" }
+  ]
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Virtual Tour Portal</title>
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <!-- Prevent /favicon.ico 404s by providing a favicon and explicit link -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml"
+        href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="%23111"/><circle cx="32" cy="32" r="20" fill="%2300d4ff"/></svg>' />
+</head>
+
+<body>
+    <main class="landing">
+        <h1>Welcome to Virtual Tours</h1>
+        <p>Enter your access password to continue.</p>
+        <!-- Landing form: submit password to verify against clients/registry.json -->
+        <form id="login-form" class="card">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="off" required />
+            <button type="submit">Continue</button>
+            <div id="status" class="status" aria-live="polite"></div>
+        </form>
+    </main>
+
+    <script type="module">
+        // Client-side verification; on success redirects to clients/<slug>/tours/<tour>/
+        import { wireLandingForm } from './engine/security.js';
+        wireLandingForm();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+{
+      "image": "panos/block15.jpeg",
+      "yaw": -1.294063,
+      "pitch": 0.12579,
+      "roll": -0.01,
+      "fov": 1.047198,
+      "hotspots": [
+        {
+          "type": "link",
+          "target": "block15_outside",
+          "orientation": "floor",
+          "yaw": 3.117766, "pitch": 0.300431
+        },
+        {
+         "type": "bubble",
+          "id": "b1501",
+          "yaw": -2.194354, "pitch": 0.241022
+        },
+        {
+         "type": "bubble",
+          "id": "b1502",
+          "yaw": -1.416138, "pitch": 0.410150
+        },
+        {
+         "type": "bubble",
+          "id": "b1503",
+          "yaw": -0.825467, "pitch": 0.256489
+        },
+        {
+         "type": "bubble",
+          "id": "b1504",
+          "yaw": 1.978466, "pitch": 0.290449
+        },
+        {
+         "type": "bubble",
+          "id": "b1505",
+          "yaw": 0.487960, "pitch": -0.094506
+        },
+        {
+         "type": "bubble",
+          "id": "b1506",
+          "yaw": 1.645290, "pitch": 0.263604
+        },
+        {
+         "type": "bubble",
+          "id": "b1507",
+          "yaw": 1.087366, "pitch": 0.308139
+        },
+        {
+         "type": "bubble",
+          "id": "b1508",
+          "yaw": 2.441053, "pitch": 0.149043
+        },
+        {
+         "type": "bubble",
+          "id": "b1509",
+          "yaw": -0.081292, "pitch": 0.169899
+        },
+        {
+         "type": "bubble",
+          "id": "b1510",
+          "yaw": 2.751263, "pitch": 0.442258
+        }
+      ],
+      "limits": {
+        "pitchMin": 0,
+        "pitchMax": 14,
+        "yawMin": -180,
+        "yawMax": 180,
+        "fovMin": 60,
+        "fovMax": 120,
+        "dragScale": 0.5
+      }
+    }

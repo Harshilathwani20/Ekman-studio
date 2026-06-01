@@ -1,0 +1,9 @@
+{
+    "clients": [
+        {
+            "slug": "neelkanth",
+            "name": "Neelkanth",
+            "config": "clients/neelkanth/client.json"
+        }
+    ]
+}

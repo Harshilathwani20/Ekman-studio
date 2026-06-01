@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Neelkanth – Showroom</title>
+  <link rel="stylesheet" href="../../../../assets/css/base.css" />
+  <!-- Provide favicon to avoid server 404 for /favicon.ico -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="%23111"/><circle cx="32" cy="32" r="20" fill="%2300d4ff"/></svg>' />
+  <style>
+    /* Full-bleed viewer: make the header overlay the pano and ensure the viewer fills the viewport */
+    html,
+    body {
+      height: 100%;
+      background: #000;
+      margin: 0;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    /* Header overlays the pano so the pano can occupy the full viewport */
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      pointer-events: auto;
+    }
+
+    header a {
+      color: #fff;
+    }
+
+    /* Viewer fills the whole viewport underneath the header */
+    #viewer-root {
+      position: absolute !important;
+      inset: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      max-width: none !important;
+      overflow: hidden !important;
+    }
+
+    /* Pano will be positioned by the viewer script to fill #viewer-root */
+    #pano {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <header style="padding: 1rem;">
+    <a href="../../../../index.html">◀ Back</a>
+  </header>
+  <div id="viewer-root"></div>
+  <!-- Load local Marzipano (prebuilt) before the viewer module -->
+  <script src="../../../../engine/marzipano.js"></script>
+  <script type="module">
+    // Start the viewer; it will load the adjacent tour.json and render scenes
+    import { startViewer } from '../../../../engine/viewer.js';
+    startViewer();
+  </script>
+</body>
+
+</html>

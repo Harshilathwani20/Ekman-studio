@@ -1,0 +1,39 @@
+# Large media files and assets
+clients/neelkanth/tours/showroom/panos
+clients/neelkanth/tours/showroom/panos_high_quality
+clients/neelkanth/tours/showroom/products
+
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Cache
+.cache/
+.eslintcache

@@ -1,0 +1,61 @@
+{
+      "image": "panos/block6_outside.jpeg",
+      "yaw": 0.029915,
+      "pitch": 0.049988,
+      "roll": -0.04,
+      "fov": 1.349553,
+      "hotspots": [
+        {
+          "type": "link",
+          "target": "block5_outside",
+          "orientation": "floor",
+          "yaw": -1.675317, "pitch": 0.338003
+        },
+        {
+          "type": "link",
+          "target": "block6",
+          "orientation": "wall",
+          "yaw": -0.079864, "pitch": 0.060164
+        },
+        {
+          "type": "link",
+          "target": "block7_outside",
+          "orientation": "floor",
+          "yaw": 1.452916, "pitch": 0.302388
+        },
+        {
+        "type": "bubble",
+        "id": "b701",
+        "yaw": 2.021241, "pitch": 0.463682
+        },
+        {
+        "type": "bubble",
+        "id": "b601",
+        "yaw": -1.134014, "pitch": 0.287174
+        },
+        {
+        "type": "bubble",
+        "id": "b602",
+        "yaw": -0.801425, "pitch": -0.041044
+        },
+        {
+        "type": "bubble",
+        "id": "b622",
+        "yaw": -0.150866, "pitch": 0.544102
+        },
+        {
+        "type": "bubble",
+        "id": "b625",
+        "yaw": 0.945497, "pitch": 0.397818
+        }
+      ],
+      "limits": {
+        "pitchMin": 0,
+        "pitchMax": 14,
+        "yawMin": -180,
+        "yawMax": 180,
+        "fovMin": 60,
+        "fovMax": 120,
+        "dragScale": 0.5
+      }
+    }

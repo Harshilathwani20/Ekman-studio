@@ -1,0 +1,67 @@
+{
+  "image": "panos/entrance.jpeg",
+  "yaw": 0,
+  "pitch": 0,
+  "roll": -0.03,
+  "fov": 1.087754,
+  "limits": {
+    "pitchMin": 0,
+    "pitchMax": 0,
+    "yawMin": -180,
+    "yawMax": 180,
+    "fovMin": 59,
+    "fovMax": 120,
+    "dragScale": 0.5
+  },
+  "hotspots": [
+    {
+      "type": "link",
+      "target": "entrance_front",
+      "orientation": "floor",
+      "yaw": 0.0839,
+      "pitch": 0.3356
+    },
+    {
+      "type": "link",
+      "target": "block1_outside",
+      "orientation": "floor",
+      "yaw": -0.846669,
+      "pitch": 0.246773
+    },
+    {
+      "type": "bubble",
+      "id": "e130",
+      "yaw": 1.580832, "pitch": 0.249458
+    }
+    ,{
+      "type": "bubble",
+      "id": "e112",
+      "yaw": -1.522267, "pitch": 0.357436
+    },
+    {
+      "type": "bubble",
+      "id": "e113",
+      "yaw": -0.441408, "pitch": 0.186793
+    },
+    {
+      "type": "bubble",
+      "id": "e114",
+      "yaw": -0.564515, "pitch": 0.252161
+    },
+    {
+      "type": "bubble",
+      "id": "e115",
+      "yaw": -0.041400, "pitch": 0.207686
+    },
+    {
+      "type": "bubble",
+      "id": "e116",
+      "yaw": 0.391883, "pitch": 0.174556
+    },
+    {
+      "type": "bubble",
+      "id": "b132",
+      "yaw": -1.112494, "pitch": 0.389230
+    }   
+  ]
+}

@@ -1,0 +1,329 @@
+:root {
+    color-scheme: light dark;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+}
+
+.landing {
+    max-width: 560px;
+    margin: 6rem auto;
+    padding: 0 1rem;
+}
+
+.card {
+    display: grid;
+    gap: 0.75rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+label {
+    font-weight: 600;
+}
+
+input {
+    padding: 0.5rem 0.6rem;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.status {
+    min-height: 1.2rem;
+    color: #c00;
+}
+
+#viewer-root {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+
+/* Hotspot styles (Kuula-like ring and product tag). Customize via variables below */
+:root {
+    --hotspot-accent: #ffffff;
+    --hotspot-product-accent: #ffc04d;
+}
+
+/* Base hotspot positioning: handled by outer .mz-hotspot */
+/* Ring-style hotspot (hollow breathing ring) */
+.mz-hotspot .ring-hotspot {
+    width: 81px;
+    height: 81px;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 50%;
+    border: 15px solid var(--hotspot-accent);
+    /* thicker ring: 3x */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* small inner anchor dot */
+.mz-hotspot .ring-hotspot::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--hotspot-accent);
+    border-radius: 50%;
+    box-shadow: 0 0 11px var(--hotspot-accent);
+    z-index: 2;
+}
+
+/* breathing outer ring */
+.mz-hotspot .ring-hotspot::after {
+    content: "";
+    position: absolute;
+    inset: -24px;
+    border: 3px solid var(--hotspot-accent);
+    border-radius: 50%;
+    opacity: 0.45;
+    animation: mz-breathe-ring 3.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    pointer-events: none;
+}
+
+.mz-hotspot .ring-hotspot span {
+    position: absolute;
+    inset: -49px;
+    border: 1px solid rgba(0, 212, 255, 0.15);
+    border-radius: 50%;
+    opacity: 0;
+    animation: mz-breathe-ring 3.2s 0.6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    pointer-events: none;
+}
+
+@keyframes mz-breathe-ring {
+    0% {
+        transform: scale(0.4);
+        opacity: 0.1;
+    }
+
+    40% {
+        opacity: 0.7;
+    }
+
+    70% {
+        opacity: 0.25;
+    }
+
+    100% {
+        transform: scale(2.2);
+        opacity: 0;
+    }
+}
+
+.mz-hotspot .ring-hotspot:hover::before {
+    transform: scale(1.12);
+    transition: transform 0.25s;
+}
+
+.mz-hotspot .ring-hotspot:focus {
+    outline: 2px solid rgba(0, 212, 255, 0.6);
+    outline-offset: 2px;
+}
+
+.mz-hotspot .product-ring::after {
+    border-color: var(--hotspot-product-accent);
+}
+
+.mz-hotspot .product-ring::before {
+    background: radial-gradient(circle at 30% 30%, #fff, var(--hotspot-product-accent));
+    box-shadow: 0 0 12px var(--hotspot-product-accent), 0 0 24px rgba(255, 192, 77, 0.4);
+}
+
+/* Bubble hotspot (information indicator) */
+.hotspot.bubble {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    margin-left: -28px;
+    margin-top: -28px;
+    background: rgba(30, 40, 60, 0.9);
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    box-shadow:
+        0 0 20px rgba(0, 212, 255, 0.6),
+        inset 0 0 12px rgba(0, 212, 255, 0.4);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hotspot.bubble .bubble-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+}
+
+.hotspot.bubble:focus {
+    outline: 2px solid rgba(0, 212, 255, 0.6);
+    outline-offset: 2px;
+}
+
+/* Hotspot orientation styles */
+/* Outer element: positioning only */
+.mz-hotspot {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+}
+
+/* Inner wrapper: visual orientation only */
+.ring-hotspot.hotspot-floor {
+    /* Floor-mounted: apply 3D rotation */
+    transform: perspective(300px) rotateX(70deg);
+    transform-style: preserve-3d;
+}
+
+/* Scene loading spinner */
+#scene-spinner {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 20% 20%, rgba(20, 30, 55, 0.85), rgba(5, 8, 15, 0.95));
+    backdrop-filter: blur(8px);
+    z-index: 4000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.28s ease, visibility 0.28s ease;
+}
+
+#scene-spinner.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+#scene-spinner .spinner-shell {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    align-items: center;
+    padding: 1.6rem 2.4rem;
+    border-radius: 18px;
+    background: rgba(6, 9, 18, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+    text-align: center;
+    min-width: 220px;
+}
+
+#scene-spinner .spinner-ring {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    border-top-color: #63d2ff;
+    border-right-color: rgba(255, 255, 255, 0.45);
+    animation: spinner-rotate 0.95s linear infinite;
+    position: relative;
+}
+
+#scene-spinner .spinner-ring::after {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border-radius: 50%;
+    border: 2px solid rgba(99, 210, 255, 0.35);
+    animation: spinner-pulse 1.4s ease-in-out infinite;
+}
+
+#scene-spinner .spinner-label {
+    margin: 0;
+    font-size: 0.95rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #f3f6ff;
+}
+
+@keyframes spinner-rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner-pulse {
+    0% {
+        opacity: 0.25;
+        transform: scale(0.7);
+    }
+
+    50% {
+        opacity: 0.9;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0.25;
+        transform: scale(0.7);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #scene-spinner .spinner-ring,
+    #scene-spinner .spinner-ring::after {
+        animation-duration: 1.8s;
+    }
+}
+
+#transfer-guard {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.8rem 1.4rem;
+    border-radius: 999px;
+    background: rgba(11, 16, 28, 0.9);
+    color: #f4f6ff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.95rem;
+    z-index: 4200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s ease;
+}
+
+#transfer-guard.is-visible {
+    opacity: 1;
+}
+
+html.modal-open,
+html.modal-open body {
+    overflow: hidden;
+}
