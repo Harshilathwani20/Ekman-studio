@@ -9,11 +9,88 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    name: Deploy Worker
+    name: Deploy Worker + Upload Static Files to R2
+
     steps:
       - uses: actions/checkout@v4
 
-      - name: Deploy to Cloudflare Workers
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Wrangler
+        run: npm install -g wrangler
+
+      - name: Upload static files to R2
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          BUCKET="ekman-studio"
+
+          upload() {
+            local file="$1"
+            if [ -f "$file" ]; then
+              echo "Uploading: $file"
+              wrangler r2 object put "$BUCKET/$file" --file="$file"
+            fi
+          }
+
+          # Root files
+          upload "index.html"
+          upload "favicon.ico"
+
+          # Assets
+          upload "assets/css/base.css"
+
+          # Client config
+          upload "clients/registry.json"
+          upload "clients/neelkanth/client.json"
+
+          # Engine
+          upload "engine/marzipano.js"
+          upload "engine/viewer.js"
+          upload "engine/security.js"
+          upload "engine/utils.js"
+          upload "engine/hotspot.js"
+          upload "engine/smoothMotion.js"
+          upload "engine/admin.js"
+
+          # Tour files
+          upload "clients/neelkanth/tours/showroom/index.html"
+          upload "clients/neelkanth/tours/showroom/tour.json"
+          upload "clients/neelkanth/tours/showroom/products.json"
+          upload "clients/neelkanth/tours/showroom/entrance.json"
+          upload "clients/neelkanth/tours/showroom/entrance_front.json"
+          upload "clients/neelkanth/tours/showroom/block1.json"
+          upload "clients/neelkanth/tours/showroom/block1_outside.json"
+          upload "clients/neelkanth/tours/showroom/block2.json"
+          upload "clients/neelkanth/tours/showroom/block2_outside.json"
+          upload "clients/neelkanth/tours/showroom/block3.json"
+          upload "clients/neelkanth/tours/showroom/block3_outside.json"
+          upload "clients/neelkanth/tours/showroom/block4.json"
+          upload "clients/neelkanth/tours/showroom/block5.json"
+          upload "clients/neelkanth/tours/showroom/block5_outside.json"
+          upload "clients/neelkanth/tours/showroom/block6.json"
+          upload "clients/neelkanth/tours/showroom/block6_outside.json"
+          upload "clients/neelkanth/tours/showroom/block7.json"
+          upload "clients/neelkanth/tours/showroom/block7_outside.json"
+          upload "clients/neelkanth/tours/showroom/block8.json"
+          upload "clients/neelkanth/tours/showroom/block8_outside.json"
+          upload "clients/neelkanth/tours/showroom/block9_1.json"
+          upload "clients/neelkanth/tours/showroom/block9_2.json"
+          upload "clients/neelkanth/tours/showroom/block10.json"
+          upload "clients/neelkanth/tours/showroom/block11.json"
+          upload "clients/neelkanth/tours/showroom/block12.json"
+          upload "clients/neelkanth/tours/showroom/block13.json"
+          upload "clients/neelkanth/tours/showroom/block13_outside.json"
+          upload "clients/neelkanth/tours/showroom/block14.json"
+          upload "clients/neelkanth/tours/showroom/block14_outside.json"
+          upload "clients/neelkanth/tours/showroom/block15.json"
+          upload "clients/neelkanth/tours/showroom/block15_outside.json"
+
+      - name: Deploy Worker
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
